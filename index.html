@@ -3,9 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Portfolio</title>
+<title>YasinErenAlacahan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Lato&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
+<!-- Three.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js"></script>
 </head>
 <body>
   <div class="Portfoly">
@@ -14,7 +18,7 @@
       <nav>
         <ul class="nav-list">
           <li><a href="#home">HOME</a></li>
-          <li><a href="#about">ABOUT ME</a></li>
+          <li><a href="#about">ABOUT</a></li>
           <li class="logo-container">
             <img class="Logoerenbeyaz1" src="IMAGES/logoerenbeyaz1.png" alt="Logo" />
           </li>
@@ -30,10 +34,14 @@
       <!-- Giriş Bölümü -->
       <section class="intro-section" id="home">
         <h1 class="HelloThere">HELLO THERE</h1>
-        <img class="AdobeExpressFile31" src="IMAGES/adobe-express-file31.png" alt="Adobe Express" />
+
+        <!-- Animasyon container -->
+        <div id="container"></div>
+
         <h2 class="YasinErenAlacahan">Yasin Eren Alacahan</h2>
         <h3 class="ComputerEngineer">Computer Engineer</h3>
       </section>
+
 
       <!-- Offer Bölümü -->
       <section class="offer-section" >
@@ -64,7 +72,6 @@
 
       <!-- About Me Bölümü -->
       <section class="about-section" id="about">
-        
         <h2>About me .</h2>
         <div class="about-content">
           <p>Hello, I'm a third-year Computer Engineering student at Konya Food and Agriculture University. I'm skilled in game development and front-end design. I'm proficient in languages like Java, Python, and C##. I love my job because I want to contribute more to the company and myself. As a hobby, I enjoy following Formula 1 and trying new games.</p>
@@ -79,7 +86,9 @@
       <section class="project-section" id="projects">
         <h2>Be Max</h2>
         <div class="project-content">
-          <img class="BeMaxFoto1" src="Be Max.jpeg" alt="Be Max" />
+          <a href="https://drive.google.com/file/d/1CGS8f5gYWzw_MiA3hZ_SiBjYp14C1FYu/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+            <img src="Be Max.jpeg" class="BeMaxFoto1" alt="Be Max" />
+          </a>
           <p>Our project, Be Max, is a mobile platform/adventure game inspired by Formula 1 driver Max Verstappen. The designs were created by Enescan. We wrote the codes together with Yunus Emre. You can download and try this cool game from the drive link.</p>
         </div>
       </section>
@@ -88,7 +97,47 @@
       <section class="contact-section" id="contacts">
         <h2>Contact Me</h2>
         <p>If you have a question or a topic you want to talk about, please write and I will get back to you as soon as I can.</p>
-        <img class="ArrowImage" src="IMAGES/arrow-Dxsc6AEwp1.png" alt="Arrow" />
+        <div class="social-bar">
+          <!-- Sosyal ikonlar -->
+          <a href="https://x.com/erenalchn" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="24" height="24" fill="currentColor" aria-hidden="true">
+              <path d="M178.57 127.15L290.27 0h-26.46l-97.03 110.38L89.34 0H0l117.13 166.93L0 300.25h26.46l102.4-116.59 81.8 116.59h89.34M36.01 19.54H76.66l187.13 262.13h-40.66"/>
+            </svg>
+          </a>
+          <a href="https://github.com/Etegnal" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 
+                0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.09-.744.083-.729.083-.729 
+                1.205.084 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.997.108-.775.418-1.305.76-1.605-2.665-.3-5.466-1.335-5.466-5.93 
+                0-1.31.467-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23a11.48 11.48 0 013.003-.404c1.02.005 2.045.138 3.003.404 
+                2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.215 
+                0 1.6-.015 2.89-.015 3.28 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+          </a>
+          <a href="https://www.youtube.com/@yasineren23" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+              <rect x="2" y="6" width="20" height="12" rx="3" ry="3" fill="currentColor" />
+              <polygon points="10,8 16,12 10,16" fill="black" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/yasin-eren-alacahan-49733127b/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+              <path d="M4.98 3.5C3.33 3.5 2 4.828 2 6.48c0 1.65 1.33 2.98 2.98 2.98 1.65 0 2.98-1.33 2.98-2.98 
+                0-1.652-1.33-2.98-2.98-2.98zM2.4 8.98h5.16v12.54H2.4V8.98zm7.2 0h4.94v1.71h.07c.69-1.31 2.37-2.7 4.88-2.7 
+                5.22 0 6.18 3.44 6.18 7.9v8.63h-5.16v-7.65c0-1.83-.03-4.18-2.55-4.18-2.56 0-2.95 2-2.95 4.06v7.77H9.6V8.98z"/>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/erenalchn/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+              <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm8.75 2a1 1 0 110 2 1 1 0 010-2zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"/>
+            </svg>
+          </a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=yasinalacahan23@gmail.com" aria-label="Email" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+              <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8l8 5 8-5v10H4z"/>
+            </svg>
+          </a>
+        </div>
       </section>
 
     </main>
@@ -109,11 +158,10 @@
       ],
       datasets: [
         {
-          label: 'SKILLS',
           data: [50, 69, 60, 34, 67, 27, 100],
           fill: true,
-          backgroundColor: 'rgba(54, 162, 235, 0.2)', // Açık mavi yarı saydam
-          borderColor: 'rgb(54, 162, 235)', // Açık mavi
+          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderColor: 'rgb(54, 162, 235)',
           pointBackgroundColor: 'rgb(54, 162, 235)',
           pointBorderColor: '#fff',
           pointHoverBackgroundColor: '#fff',
@@ -136,13 +184,13 @@
         scales: {
           r: {
             angleLines: {
-              color: 'rgba(54, 162, 235, 0.3)' // Açık mavi eksen çizgileri
+              color: 'rgba(54, 162, 235, 0.3)'
             },
             grid: {
-              color: 'rgba(54, 162, 235, 0.2)' // Açık mavi grid çizgileri
+              color: 'rgba(54, 162, 235, 0.2)'
             },
             pointLabels: {
-              color: '#a9d6e5', // Açık mavi etiketler
+              color: '#a9d6e5',
               font: {
                 size: 14,
                 family: "'Playfair Display', serif"
@@ -175,18 +223,12 @@
             },
             callbacks: {
               label: function(context) {
-                return context.dataset.label + ': ' + context.parsed.r + ' / 100';
+                return context.parsed.r + ' / 100';
               }
             }
           },
           legend: {
-            labels: {
-              color: '#a9d6e5',
-              font: {
-                family: "'Playfair Display', serif",
-                size: 16
-              }
-            }
+            display: false
           }
         }
       }
@@ -194,6 +236,184 @@
 
     const ctx = document.getElementById('radarChart').getContext('2d');
     new Chart(ctx, config);
+  </script>
+
+  <!-- Three.js 3D Atom Animasyonu Scripti -->
+  <script>
+    var Colors = {
+      red:0xf25346,
+      white:0xd8d0d1,
+      brown:0x59332e,
+      pink:0xF5986E,
+      brownDark:0x23190f,
+      blue:0x68c3c0,
+    };
+
+    var scene = new THREE.Scene();
+
+    var container = document.getElementById('container');
+    var width = container.clientWidth;
+    var height = container.clientHeight;
+
+    var camera = new THREE.OrthographicCamera(
+      width / -2,
+      width / 2,
+      height / 2,
+      height / -2,
+      -1000,
+      1000
+    );
+    camera.position.z = 2;
+
+    var renderer = new THREE.WebGLRenderer({
+      antialias: true,
+      alpha: true
+    });
+    renderer.setClearColor("#fff", 0);
+    renderer.setSize(width, height);
+    container.appendChild(renderer.domElement);
+
+    var ambientLight = new THREE.AmbientLight(0x000000);
+    scene.add(ambientLight);
+
+    var lights = [];
+
+    lights[0] = new THREE.PointLight(0xffffff, 0.5, 0);
+    lights[0].position.set(200, 0, 0);
+
+    lights[1] = new THREE.PointLight(0xffffff, 0.5, 0);
+    lights[1].position.set(0, 200, 0);
+
+    lights[2] = new THREE.PointLight(0xffffff, 0.5, 0);
+    lights[2].position.set(0, 100, 100);
+
+    lights[3] = new THREE.AmbientLight(0xffffff, 0.6);
+
+    lights.forEach(function(light){
+      scene.add(light);
+    });
+
+    function createTorus(r, tubeD, radialSegs, tubularSegs, arc, color, rotationX){
+      var geometry = new THREE.TorusGeometry(r, tubeD, radialSegs, tubularSegs, arc);
+      var material = new THREE.MeshLambertMaterial({ color: color || "#ff7171" });
+      var torus = new THREE.Mesh(geometry, material);
+      torus.rotation.x = rotationX;
+      return torus;
+    }
+
+    function createSphere(params){
+      var geometry = new THREE.SphereGeometry( width / (params.r || 40), 50, 50 );
+      var material = new THREE.MeshPhongMaterial({
+        color: params.color || Colors.blue,
+        transparent: true,
+        opacity: 0.8
+      });
+      var sphere = new THREE.Mesh( geometry, material );
+      sphere.position.x = params.x || 0;
+      sphere.position.y = params.y || 0;
+      return sphere;
+    }
+
+    const baseRadius = (width > height ? (height - 40 / 2) : (width - 40 / 2));
+
+    function createValence(ringNumber, electronCount){
+      var radius = 50 + (baseRadius / 20) * ringNumber;
+
+      var ring = createTorus(
+        radius,
+        baseRadius / 600,
+        20,
+        100,
+        Math.PI * 2,
+        '#E47170',
+        0
+      );
+
+      var electrons = [];
+
+      var angleIncrement = (Math.PI * 2) / electronCount;
+      var angle = 0;
+
+      for (var i = 0; i < electronCount; i++) {
+        var posX = radius * Math.cos(angle);
+        var posY = radius * Math.sin(angle);
+        angle += angleIncrement;
+
+        var electron = createSphere({ r: 120, x: posX, y: posY, color: Colors.pink });
+        electrons.push(electron);
+      }
+
+      var group = new THREE.Group();
+
+      group.add(ring);
+      electrons.forEach(function(electron){
+        group.add(electron);
+      });
+
+      return group;
+    }
+
+    var nucleus = createSphere({ color: Colors.pink });
+    scene.add(nucleus);
+
+    var shellCounts = [2, 6, 10, 14, 18];
+    var valenceCount = 6;
+    var valences = [];
+
+    for (var i = 1; i <= valenceCount; i++) {
+      var shellCountIndex = (i - 1) % shellCounts.length;
+      var v = createValence(i, shellCounts[shellCountIndex]);
+      valences.push(v);
+      scene.add(v);
+    }
+
+    const electronAngles = valences.map(() => []);
+
+    valences.forEach((valence, i) => {
+      const electronCount = valence.children.length - 1;
+      for(let j=0; j < electronCount; j++) {
+        electronAngles[i][j] = (2 * Math.PI / electronCount) * j;
+      }
+    });
+
+    function render(){
+      requestAnimationFrame(render);
+
+      const baseRotation = 0.01;
+
+      valences.forEach((valence, i) => {
+        valence.rotation.y += baseRotation - (i * 0.001);
+        valence.rotation.x += baseRotation - (i * 0.001);
+        valence.rotation.z += baseRotation - (i * 0.001);
+
+        const electronCount = valence.children.length - 1;
+        for(let j=0; j < electronCount; j++) {
+          electronAngles[i][j] += 0.02;
+          const radius = valence.children[0].geometry.parameters.radius;
+          const electron = valence.children[j+1];
+          electron.position.x = radius * Math.cos(electronAngles[i][j]);
+          electron.position.y = radius * Math.sin(electronAngles[i][j]);
+        }
+      });
+
+      nucleus.rotation.x += 0.01;
+      nucleus.rotation.y += 0.01;
+
+      renderer.render(scene, camera);
+    }
+
+    render();
+
+    window.addEventListener('resize', () => {
+      const width = container.clientWidth;
+      const height = container.clientHeight;
+      renderer.setSize(width, height);
+      camera.left = width / -2;
+      camera.right = width / 2;
+      camera.top = height / 2;
+      camera.bottom = height / -2;
+      camera.updateProjectionMatrix();
+    });
   </script>
 </body>
 </html>
