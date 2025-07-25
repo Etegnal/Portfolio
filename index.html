@@ -9,6 +9,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Lato&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="styles.css" />
 <!-- Three.js CDN -->
+ <!-- Font Awesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js"></script>
 </head>
 <body>
@@ -27,6 +30,20 @@
         </ul>
       </nav>
     </header>
+    <!-- Hamburger Menü (sadece mobil için) -->
+   <!-- Mobil Üst Alan -->
+    <div class="mobile-header">
+      <img src="./images/logoerenbeyaz1.png" class="mobile-logo" alt="logo">
+      <div class="hamburger" onclick="toggleMobileMenu()">&#9776;</div>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#home"><i class="fas fa-home"></i></a>
+        <a href="#about"><i class="fas fa-user"></i></a>
+        <a href="#projects"><i class="fas fa-code"></i></a>
+        <a href="#contacts"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+
 
     <!-- Ana içerik -->
     <main>
@@ -414,6 +431,13 @@
       camera.bottom = height / -2;
       camera.updateProjectionMatrix();
     });
+    
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+  }
+</script>
+
   </script>
 </body>
 </html>

@@ -345,12 +345,133 @@ main {
 }
 .social-bar a:hover {
   color: #1da1f2;
+  transform: scale(1.2);
 }
 .social-bar svg {
   width: 24px;
   height: 24px;
   fill: currentColor;
 }
+.HelloThere{
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideUp 1.2s ease-out forwards;
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.mobile-header {
+  display: none;
+}
+
+/* Mobil Logo */
+.mobile-logo {
+  height: 40px;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+/* Hamburger Buton */
+.hamburger {
+  font-size: 30px;
+  color: white;
+  padding: 20px;
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  top: -10px;
+}
+
+/* Menü Yapısı */
+.mobile-menu {
+  display: none;
+  flex-direction: row; /* Sola doğru açılması için yatay */
+  justify-content: flex-start;
+  align-items: center;
+  background-color: black;
+  opacity: 70% ;
+  padding: 10px 0;
+  position: absolute;
+  top: 60px;
+  left: 0px;
+  z-index: 999;
+  width: 100%;
+  justify-content: center;
+}
+
+.mobile-menu a {
+  padding: 10px 15px;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.mobile-menu a:hover {
+  background-color: #222;
+}
+
+/* Genel Mobil Header Ayarı */
+.mobile-header {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  width: 100%;
+  height: 60px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+/* Sadece mobilde görünsün */
+@media screen and (max-width: 768px) {
+  .nav,
+  .desktop-header {
+    display: none !important;
+  }
+
+  .mobile-header {
+    display: flex;
+  }
+
+  body {
+    padding-top: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  header.Frame1,
+  header.Frame1 nav,
+  header.Frame1 .nav-list {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .mobile-header {
+    display: flex !important;
+  }
+  /* Desktop görünümde hamburger ve mobil menüyü gizle */
+@media screen and (min-width: 768px) {
+  .hamburger,
+  .mobile-menu {
+    display: none !important;
+  }
+}
+
+}
+
 
 /* Responsive ve mobil ayarlar (aynı şekilde korunacak) */
 /* ... (Buraya yukarıdaki media query'ler aynen gelecek) */
