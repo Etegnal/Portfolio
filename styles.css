@@ -433,6 +433,18 @@ main {
   justify-content: flex-start;
   gap: 10px;
 }
+@media screen and (min-width: 769px) {
+  .mobile-header,
+  .mobile-logo,
+  .hamburger,
+  .mobile-menu {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    background: none !important;
+  }
+}
 
 /* Sadece mobilde görünsün */
 @media screen and (max-width: 768px) {
